@@ -34,7 +34,10 @@ export async function POST(request: Request) {
   }
 
   const apiKey = process.env.RESEND_API_KEY;
-  const to = process.env.CONTACT_TO_EMAIL || siteConfig.email;
+  const to = (process.env.CONTACT_TO_EMAIL || siteConfig.email)
+    .split(",")
+    .map((address) => address.trim())
+    .filter(Boolean);
 
   const summary = [
     `Empresa: ${company}`,
@@ -58,7 +61,7 @@ export async function POST(request: Request) {
   try {
     const resend = new Resend(apiKey);
     const { error } = await resend.emails.send({
-      from: `Industrias Texano <cotizaciones@${new URL(siteConfig.domain).hostname}>`,
+      from: "Industrias Texano <info@industriastexano.com>",
       to,
       replyTo: isNonEmptyString(email) ? email : undefined,
       subject: `Nueva solicitud de cotización — ${company}`,
