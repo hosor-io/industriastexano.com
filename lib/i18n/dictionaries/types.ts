@@ -1,0 +1,124 @@
+export type Dictionary = {
+  meta: { titleSuffix: string; description: string };
+  nav: {
+    inicio: string;
+    nosotros: string;
+    productos: string;
+    servicios: string;
+    marcas: string;
+    contacto: string;
+    menuOpen: string;
+    menuClose: string;
+    langSwitch: string;
+    quoteCta: string;
+  };
+  home: {
+    badge: string;
+    heroTitlePrefix: string;
+    heroTitleHighlight: string;
+    heroBody: string;
+    ctaPrimary: string;
+    ctaSecondary: string;
+    specLabel: string;
+    specValue: string;
+    specCaption: string;
+    sectionEyebrow: string;
+    sectionTitle: string;
+    sectionLead: string;
+    products: { tag: string; code: string; title: string; description: string }[];
+    statsEyebrow: string;
+    statsTitle: string;
+    statsBody: string;
+    statPieces: string;
+    statYears: string;
+    ctaSectionEyebrow: string;
+    ctaSectionTitle: string;
+    ctaEmailPlaceholder: string;
+    ctaSubmit: string;
+  };
+  about: {
+    eyebrow: string;
+    title: string;
+    badgeTop: string;
+    badgeYears: string;
+    badgeEst: string;
+    introSpec: string;
+    introCaption: string;
+    introBody: string;
+    milestonesTitle: string;
+    milestones: { year: string; title: string; body: string }[];
+    valuesTitle: string;
+    values: { title: string; body: string }[];
+    ctaEyebrow: string;
+    ctaButton: string;
+  };
+  products: {
+    tag: string;
+    title: string;
+    items: { number: string; name: string; spec: string; badge: string | null; description: string }[];
+    ctaTitle: string;
+    ctaBody: string;
+    ctaButton: string;
+  };
+  services: {
+    eyebrow: string;
+    title: string;
+    items: {
+      number: string;
+      badge: string;
+      title: string;
+      description: string;
+      specs?: { label: string; value: string }[];
+      chips?: string[];
+    }[];
+    quote: string;
+  };
+  brands: {
+    eyebrow: string;
+    title: string;
+    lead: string;
+    items: { name: string; origin: string; tags: string[]; cta: string }[];
+    specTitle: string;
+    specs: { label: string; value: string; ref: string }[];
+  };
+  contact: {
+    eyebrow: string;
+    title: string;
+    locationBadge: string;
+    formBadge: string;
+    form: {
+      company: string;
+      companyPlaceholder: string;
+      name: string;
+      namePlaceholder: string;
+      email: string;
+      emailPlaceholder: string;
+      phone: string;
+      phonePlaceholder: string;
+      product: string;
+      productOptions: string[];
+      quantity: string;
+      quantityPlaceholder: string;
+      message: string;
+      messagePlaceholder: string;
+      submit: string;
+      submitting: string;
+      success: string;
+      error: string;
+    };
+    channelsTitle: string;
+    whatsapp: { label: string; caption: string };
+    phone: { label: string; caption: string };
+    email: { label: string; caption: string };
+    millCaption: string;
+  };
+  footer: {
+    tagline: string;
+    address: string;
+    privacy: string;
+    terms: string;
+    compliance: string;
+    rights: string;
+  };
+  whatsappMessage: string;
+};

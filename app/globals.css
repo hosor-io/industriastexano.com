@@ -1,26 +1,124 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/*
+  Design tokens ported from the Stitch "Industrias Texano" design system
+  (industrial / brutalist-lite: hard borders, dashed "stitching" dividers,
+  hard-shadow, care-label tags). Brand colors unified across all screens to
+  the official brand kit: navy #252D30 and gold #ECB84B.
+*/
+@theme {
+  --font-sans: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+  --font-label-tech: var(--font-archivo-narrow), ui-sans-serif, system-ui, sans-serif;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-ink: #11181b;
+  --color-navy: #252d30;
+  --color-on-navy-muted: #8c9498;
+  --color-gold: #ecb84b;
+  --color-on-gold: #11181b;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-surface: #f2fbfe;
+  --color-surface-container: #e7eff3;
+  --color-surface-container-low: #edf5f9;
+  --color-surface-container-high: #e1e9ed;
+  --color-surface-container-highest: #dce4e8;
+  --color-surface-container-lowest: #ffffff;
+  --color-on-surface: #151d20;
+  --color-on-surface-variant: #434749;
+  --color-outline: #74787a;
+  --color-outline-variant: #c3c7c9;
+
+  --spacing-unit: 4px;
+  --spacing-base: 8px;
+  --spacing-gutter: 24px;
+  --spacing-stitching-gap: 4px;
+  --spacing-margin-edge: 32px;
+
+  --text-display-xl: 72px;
+  --text-display-xl--line-height: 72px;
+  --text-display-xl--letter-spacing: -0.02em;
+  --text-display-xl--font-weight: 800;
+
+  --text-headline-xl: 48px;
+  --text-headline-xl--line-height: 56px;
+  --text-headline-xl--letter-spacing: -0.02em;
+  --text-headline-xl--font-weight: 700;
+
+  --text-headline-lg: 32px;
+  --text-headline-lg--line-height: 40px;
+  --text-headline-lg--font-weight: 700;
+
+  --text-headline-lg-mobile: 28px;
+  --text-headline-lg-mobile--line-height: 36px;
+  --text-headline-lg-mobile--font-weight: 700;
+
+  --text-headline-md: 24px;
+  --text-headline-md--line-height: 32px;
+  --text-headline-md--font-weight: 600;
+
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 28px;
+  --text-body-lg--font-weight: 400;
+
+  --text-body-md: 16px;
+  --text-body-md--line-height: 24px;
+  --text-body-md--font-weight: 400;
+
+  --text-label-tech: 14px;
+  --text-label-tech--line-height: 20px;
+  --text-label-tech--letter-spacing: 0.05em;
+  --text-label-tech--font-weight: 500;
+
+  --text-technical-sm: 12px;
+  --text-technical-sm--line-height: 16px;
+  --text-technical-sm--letter-spacing: 0.1em;
+  --text-technical-sm--font-weight: 500;
+
+  --text-technical-xs: 10px;
+  --text-technical-xs--line-height: 12px;
+  --text-technical-xs--letter-spacing: 0.15em;
+  --text-technical-xs--font-weight: 600;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-surface);
+  color: var(--color-on-surface);
+  overflow-x: hidden;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+/* Stitch design-system motifs, shared across pages */
+.stitch-divider {
+  border-top: 2px dashed var(--color-gold);
+}
+.hard-shadow {
+  box-shadow: 4px 4px 0 0 var(--color-ink);
+}
+.hard-shadow-gold {
+  box-shadow: 4px 4px 0 0 var(--color-gold);
+}
+.care-label-tilt-left {
+  transform: rotate(-1.5deg);
+}
+.care-label-tilt-right {
+  transform: rotate(1.5deg);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-surface-container);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-navy);
+}
+
+/* Visible keyboard focus ring in brand gold (Stitch stripped default rings
+   without a replacement on several inputs/buttons). */
+:focus-visible {
+  outline: 3px solid var(--color-gold);
+  outline-offset: 2px;
 }

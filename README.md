@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Industrias Texano — sitio web
 
-## Getting Started
+Next.js (App Router) + Tailwind CSS. Sitio bilingüe (ES/EN) construido sobre el diseño de Google Stitch para Industrias Texano.
 
-First, run the development server:
+## Desarrollo local
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000) (redirige a `/es`).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Variables de entorno
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Copia `.env.example` a `.env.local` y completa:
 
-## Learn More
+- `RESEND_API_KEY` — API key de [Resend](https://resend.com) para el envío de correos del formulario de contacto (`app/api/contact/route.ts`). Sin esta variable, las solicitudes se registran en la consola del servidor en vez de enviarse por correo.
+- `CONTACT_TO_EMAIL` — bandeja que recibe las cotizaciones.
 
-To learn more about Next.js, take a look at the following resources:
+## Pendientes de contenido (assets del cliente)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Logo**: ✅ integrado. `components/logo.tsx` usa los archivos oficiales del cliente en `public/brand/` (`logo-ink.png`, `logo-gold.png`, `logo-white.png`, más los íconos sueltos `icon-*.png`).
+- **Favicon**: ✅ integrado. `app/icon.png` + `public/favicons/` usan los archivos oficiales del cliente (apple-touch-icon y android-icon), referenciados desde `app/[locale]/layout.tsx` y `public/manifest.json`.
+- **Fotografías de producto/planta**: ⚠️ provisionales. `public/images/` contiene las fotos de stock que trae el mockup de Stitch (no son fotografía real del cliente) — se usan como relleno visual temporal vía `components/placeholder-photo.tsx` (acepta un prop `src`; si se omite, muestra una caja con patrón + "Foto pendiente"). Cuando el cliente entregue sus propias fotos, reemplazar los archivos en `public/images/` (o pasar nuevas rutas en cada página) para que se sirvan optimizadas con `next/image`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Despliegue (Vercel + GitHub)
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Sube este repositorio a GitHub.
+2. En Vercel, "Import Project" desde ese repositorio (plan Hobby).
+3. Configura las variables de entorno (`RESEND_API_KEY`, `CONTACT_TO_EMAIL`) en el proyecto de Vercel.
+4. Cada push a la rama principal despliega automáticamente.
+5. Dominio personalizado: agregar `industriastexano.com` en Vercel → Settings → Domains, y apuntar los DNS en GoDaddy (registro A/CNAME o cambio de nameservers) según indique Vercel.
