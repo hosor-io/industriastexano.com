@@ -98,7 +98,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             {t.products.map((product, i) => (
-              <div key={product.code}>
+              <div key={product.title}>
                 <div className="relative mb-6 h-[380px] overflow-hidden border-2 border-navy md:h-[450px]">
                   <PlaceholderPhoto label={product.title} alt={product.title} src={productImages[i]} grayscaleHover />
                   <div className="absolute top-4 left-4 bg-navy px-2 py-1 font-label-tech text-[10px] font-bold uppercase text-white">
@@ -106,10 +106,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                   </div>
                 </div>
                 <div className="border-b-2 border-navy pb-4">
-                  <div className="mb-2 flex items-baseline justify-between">
-                    <h3 className="text-headline-md uppercase text-on-surface">{product.title}</h3>
-                    <span className="font-label-tech text-label-tech font-bold text-gold">{product.code}</span>
-                  </div>
+                  <h3 className="mb-2 text-headline-md uppercase text-on-surface">{product.title}</h3>
                   <p className="text-body-md text-on-surface-variant">{product.description}</p>
                 </div>
               </div>
@@ -136,7 +133,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               precision_manufacturing
             </span>
             <div>
-              <div className="text-headline-xl text-gold">10K</div>
+              <div className="text-headline-xl text-gold">10,000+</div>
               <div className="font-label-tech text-[10px] font-bold uppercase opacity-70">{t.statPieces}</div>
             </div>
           </div>
@@ -145,7 +142,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               history
             </span>
             <div>
-              <div className="text-headline-xl">35+</div>
+              <div className="text-headline-xl">40+</div>
               <div className="font-label-tech text-[10px] font-bold uppercase opacity-70">{t.statYears}</div>
             </div>
           </div>

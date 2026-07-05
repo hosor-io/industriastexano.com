@@ -46,7 +46,11 @@ export default async function NosotrosPage({ params }: { params: Promise<{ local
       {/* Intro */}
       <section className="grid gap-6 py-4 md:grid-cols-2 md:items-center md:gap-12">
         <div className="relative aspect-square w-full overflow-hidden border-2 border-ink">
-          <PlaceholderPhoto label="Telar industrial" alt="Telar industrial de mezclilla" src="/images/telar-industrial.jpg" />
+          <PlaceholderPhoto
+            label={locale === "es" ? "Taller de confección" : "Sewing workshop"}
+            alt={locale === "es" ? "Taller de confección de jeans" : "Jeans sewing workshop"}
+            src="/images/servicio-bordado.jpg"
+          />
           <div className="hard-shadow absolute bottom-4 left-4 right-4 border-2 border-ink bg-surface p-3">
             <p className="font-label-tech text-[10px] uppercase text-ink">{t.introSpec}</p>
             <p className="font-bold uppercase text-ink">{t.introCaption}</p>

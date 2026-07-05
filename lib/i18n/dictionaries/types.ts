@@ -25,7 +25,7 @@ export type Dictionary = {
     sectionEyebrow: string;
     sectionTitle: string;
     sectionLead: string;
-    products: { tag: string; code: string; title: string; description: string }[];
+    products: { tag: string; title: string; description: string }[];
     statsEyebrow: string;
     statsTitle: string;
     statsBody: string;

@@ -14,10 +14,10 @@ export async function generateMetadata({
 }
 
 const productImages = [
-  "/images/denim-texture.jpg",
-  "/images/mill-facility.jpg",
+  "/images/jeans-industriales.jpg",
+  "/images/bordado-corporativo.jpg",
   "/images/producto-uniformes.jpg",
-  "/images/servicio-lavanderia.jpg",
+  "/images/denim-texture.jpg",
   "/images/producto-camisas.jpg",
 ];
 
