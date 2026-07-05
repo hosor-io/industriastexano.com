@@ -3,7 +3,7 @@ import Image from "next/image";
 import CareLabel from "@/components/ui/care-label";
 import PlaceholderPhoto from "@/components/placeholder-photo";
 import StitchDivider from "@/components/ui/stitch-divider";
-import { defaultLocale, isLocale, type Locale } from "@/lib/i18n/config";
+import { defaultLocale, isLocale, siteConfig, type Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 
 export async function generateMetadata({
@@ -14,7 +14,10 @@ export async function generateMetadata({
   const { locale: rawLocale } = await params;
   const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
   const dict = getDictionary(locale);
-  return { title: dict.home.heroTitlePrefix + " " + dict.home.heroTitleHighlight };
+  // This segment sits at the same level as the layout defining the title
+  // template, so it doesn't inherit it — build the "| Industrias Texano"
+  // suffix explicitly to match every other page's tab title.
+  return { title: `${dict.home.heroTitlePrefix} ${dict.home.heroTitleHighlight} | ${siteConfig.name}` };
 }
 
 const productImages = ["/images/jeans-industriales.jpg", "/images/bordado-corporativo.jpg", "/images/gabanes-pesados.jpg"];

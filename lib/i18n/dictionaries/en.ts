@@ -20,8 +20,8 @@ const en: Dictionary = {
   },
   home: {
     badge: "EST. 1982 · EL SALVADOR · 10,000+ PC/MONTH",
-    heroTitlePrefix: "Workwear built for",
-    heroTitleHighlight: "real work",
+    heroTitlePrefix: "Experts in",
+    heroTitleHighlight: "jeans manufacturing",
     heroBody:
       "40+ years cutting, sewing and embroidering denim for companies and institutions across El Salvador, Guatemala and Costa Rica. Certified industrial quality.",
     ctaPrimary: "Request a quote",

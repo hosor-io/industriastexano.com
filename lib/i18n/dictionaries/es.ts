@@ -20,8 +20,8 @@ const es: Dictionary = {
   },
   home: {
     badge: "EST. 1982 · EL SALVADOR · 10,000+ PZ/MES",
-    heroTitlePrefix: "Uniformes que aguantan el",
-    heroTitleHighlight: "trabajo real",
+    heroTitlePrefix: "Expertos en fabricación de",
+    heroTitleHighlight: "jeans",
     heroBody:
       "40+ años cortando, cosiendo y bordando denim para empresas e instituciones en El Salvador, Guatemala y Costa Rica. Calidad industrial certificada.",
     ctaPrimary: "Solicitar cotización",
