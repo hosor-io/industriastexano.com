@@ -35,7 +35,7 @@ const en: Dictionary = {
     products: [
       {
         tag: "Industrial Denim",
-        title: "Industrial Jeans",
+        title: "Institutional Uniforms",
         description: "Triple-reinforced seams, copper rivets, and pre-washed fabric.",
       },
       {
@@ -44,9 +44,9 @@ const en: Dictionary = {
         description: "High-density personalization with threads resistant to chemical processes.",
       },
       {
-        tag: "Premium Denim",
-        title: "Heavy-Duty Coats",
-        description: "Superior protection for field personnel in extreme industrial conditions.",
+        tag: "Industrial Laundry",
+        title: "Industrial Laundry",
+        description: "Industrial finishes: stone wash, sand blast, and enzyme treatment.",
       },
     ],
     statsEyebrow: "02 // REGIONAL PRESENCE",

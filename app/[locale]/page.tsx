@@ -20,7 +20,7 @@ export async function generateMetadata({
   return { title: `${dict.home.heroTitlePrefix} ${dict.home.heroTitleHighlight} | ${siteConfig.name}` };
 }
 
-const productImages = ["/images/jeans-industriales.jpg", "/images/bordado-corporativo.jpg", "/images/gabanes-pesados.jpg"];
+const productImages = ["/images/jeans-industriales.jpg", "/images/bordado-corporativo.jpg", "/images/servicio-lavanderia.jpg"];
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale: rawLocale } = await params;

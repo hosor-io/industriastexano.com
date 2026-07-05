@@ -35,7 +35,7 @@ const es: Dictionary = {
     products: [
       {
         tag: "Denim Industrial",
-        title: "Jeans Industriales",
+        title: "Uniformes Institucionales",
         description: "Costuras triple refuerzo, remaches de cobre y tela pre-lavada.",
       },
       {
@@ -44,9 +44,9 @@ const es: Dictionary = {
         description: "Personalización de alta densidad con hilos resistentes a procesos químicos.",
       },
       {
-        tag: "Mezclilla Premium",
-        title: "Gabanes Pesados",
-        description: "Protección superior para personal de campo en condiciones industriales extremas.",
+        tag: "Lavandería Industrial",
+        title: "Lavandería Industrial",
+        description: "Acabados industriales: stone wash, sand blast y tratamiento enzimático.",
       },
     ],
     statsEyebrow: "02 // PRESENCIA REGIONAL",
