@@ -5,6 +5,7 @@ import PlaceholderPhoto from "@/components/placeholder-photo";
 import StitchDivider from "@/components/ui/stitch-divider";
 import { defaultLocale, isLocale, siteConfig, type Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/dictionaries";
+import { clients } from "@/lib/clients";
 
 export async function generateMetadata({
   params,
@@ -148,6 +149,34 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               <div className="text-headline-xl">40+</div>
               <div className="font-label-tech text-[10px] font-bold uppercase opacity-70">{t.statYears}</div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Clients */}
+      <section className="border-y-2 border-dashed border-outline-variant bg-surface-container px-margin-edge py-20 md:py-24">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-12 text-center md:mb-16">
+            <span className="mb-2 block font-label-tech text-label-tech font-bold uppercase text-gold">
+              {t.clientsEyebrow}
+            </span>
+            <h2 className="text-headline-lg uppercase text-on-surface">{t.clientsTitle}</h2>
+          </div>
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+            {clients.map((client) => (
+              <div
+                key={client.name}
+                className="group flex aspect-[3/2] items-center justify-center border-2 border-outline-variant bg-surface-container-lowest p-6 md:p-8"
+              >
+                <Image
+                  src={client.logo}
+                  alt={client.name}
+                  width={client.width}
+                  height={client.height}
+                  className="max-h-14 w-auto object-contain opacity-70 grayscale transition-all duration-300 group-hover:opacity-100 group-hover:grayscale-0 md:max-h-16"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>

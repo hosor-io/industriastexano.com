@@ -54,6 +54,8 @@ const en: Dictionary = {
     statsBody: "We export directly from our central plant to the region's main industrial hubs.",
     statPieces: "Garments / Month",
     statYears: "Years of experience",
+    clientsEyebrow: "03 // CLIENTS",
+    clientsTitle: "Companies that trust us",
     ctaSectionEyebrow: "Ready to equip your team?",
     ctaSectionTitle: "Request a fabric sample and industrial quote",
     ctaEmailPlaceholder: "EMAIL@COMPANY.COM",

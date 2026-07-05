@@ -54,6 +54,8 @@ const es: Dictionary = {
     statsBody: "Exportamos directamente desde nuestra planta central a los principales centros industriales de la región.",
     statPieces: "Prendas / Mes",
     statYears: "Años de experiencia",
+    clientsEyebrow: "03 // CLIENTES",
+    clientsTitle: "Empresas que confían en nosotros",
     ctaSectionEyebrow: "¿Listo para equipar a su equipo?",
     ctaSectionTitle: "Solicite una muestra de tejido y cotización industrial",
     ctaEmailPlaceholder: "CORREO@EMPRESA.COM",

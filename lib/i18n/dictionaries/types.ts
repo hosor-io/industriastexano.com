@@ -31,6 +31,8 @@ export type Dictionary = {
     statsBody: string;
     statPieces: string;
     statYears: string;
+    clientsEyebrow: string;
+    clientsTitle: string;
     ctaSectionEyebrow: string;
     ctaSectionTitle: string;
     ctaEmailPlaceholder: string;
