@@ -146,7 +146,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               history
             </span>
             <div>
-              <div className="text-headline-xl">40+</div>
+              <div className="text-headline-xl">46+</div>
               <div className="font-label-tech text-[10px] font-bold uppercase opacity-70">{t.statYears}</div>
             </div>
           </div>

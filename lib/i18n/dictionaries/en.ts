@@ -2,9 +2,9 @@ import type { Dictionary } from "./types";
 
 const en: Dictionary = {
   meta: {
-    titleSuffix: "Industrias Texano — Jeans and Corporate Uniform Manufacturers Since 1982",
+    titleSuffix: "Industrias Texano — Jeans Manufacturing Experts Since 1980",
     description:
-      "40+ years cutting, sewing and embroidering denim for companies and institutions across El Salvador, Guatemala and Costa Rica. Certified industrial quality.",
+      "46+ years cutting, sewing and embroidering denim for companies and institutions across El Salvador, Guatemala and Costa Rica. Certified industrial quality.",
   },
   nav: {
     inicio: "Home",
@@ -19,11 +19,11 @@ const en: Dictionary = {
     quoteCta: "Request a quote",
   },
   home: {
-    badge: "EST. 1982 · EL SALVADOR · 10,000+ PC/MONTH",
+    badge: "EST. 1980 · EL SALVADOR",
     heroTitlePrefix: "Experts in",
     heroTitleHighlight: "jeans manufacturing",
     heroBody:
-      "40+ years cutting, sewing and embroidering denim for companies and institutions across El Salvador, Guatemala and Costa Rica. Certified industrial quality.",
+      "46+ years mastering the cutting, sewing, and finishing of denim — today we bring that same craftsmanship to corporate uniforms.",
     ctaPrimary: "Request a quote",
     ctaSecondary: "View catalog",
     specLabel: "Denim",
@@ -35,7 +35,7 @@ const en: Dictionary = {
     products: [
       {
         tag: "Industrial Denim",
-        title: "Institutional Uniforms",
+        title: "Jeans Manufacturing",
         description: "Triple-reinforced seams, copper rivets, and pre-washed fabric.",
       },
       {
@@ -65,22 +65,22 @@ const en: Dictionary = {
     eyebrow: "Industrial Heritage",
     title: "Our history and values",
     badgeTop: "Excellence Record",
-    badgeYears: "40+ years of experience",
-    badgeEst: "EST. 1982",
-    introSpec: "Spec: Since 1982",
+    badgeYears: "46+ years of experience",
+    badgeEst: "EST. 1980",
+    introSpec: "Spec: Since 1980",
     introCaption: "Rooted in craftsmanship",
     introBody:
-      "Founded on the pillars of hard work and technical precision, Industrias Texano has grown from a family workshop into a regional benchmark in high-durability jeans and uniform manufacturing.",
+      "It all began in 1970 as a family pants business. In 1980, Industrias Texano was formally founded, and we've since grown into expert manufacturers of jeans and denim uniforms, trusted by customers and suppliers across the region.",
     milestonesTitle: "Technical Milestones",
     milestones: [
-      { year: "01 / 1982", title: "Founding", body: "We began operations in 1982 as a family workshop dedicated to making jeans." },
-      { year: "02 / 2005", title: "Regional Expansion", body: "We consolidated our presence in international markets, exporting industrial quality." },
-      { year: "03 / 2024", title: "New Era", body: "Integrating sustainable technologies without sacrificing the robustness of the original fabric." },
+      { year: "01 / 1970", title: "Family roots", body: "Started as a small family pants business, built on quality and close customer relationships." },
+      { year: "02 / 1980", title: "Industrias Texano is founded", body: "Formally established as Industrias Texano, beginning our specialization in jeans and denim garments." },
+      { year: "03 / Last 15 years", title: "Jeans manufacturing experts", body: "Consolidated as expert jeans manufacturers, recognized by customers and suppliers across the region." },
     ],
     valuesTitle: "Our Values",
     values: [
       { title: "Family Legacy", body: "We believe in the shared growth of our community and our team." },
-      { title: "Technical Rigor", body: "Every inch of fabric is subjected to extreme industrial resistance testing." },
+      { title: "Technical Rigor", body: "Every garment goes through thorough quality checks at each stage of production." },
     ],
     ctaEyebrow: "Want to know more?",
     ctaButton: "View technical specifications",
@@ -170,7 +170,7 @@ const en: Dictionary = {
     millCaption: "Facility view 01A",
   },
   footer: {
-    tagline: "Jeans and uniform manufacturers since 1982",
+    tagline: "Jeans and uniform manufacturers since 1980",
     address: "San Salvador, El Salvador",
     privacy: "Privacy",
     terms: "Terms",

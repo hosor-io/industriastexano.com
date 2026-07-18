@@ -2,9 +2,9 @@ import type { Dictionary } from "./types";
 
 const es: Dictionary = {
   meta: {
-    titleSuffix: "Industrias Texano — Fabricantes de Jeans y Uniformes Corporativos desde 1982",
+    titleSuffix: "Industrias Texano — Expertos en Fabricación de Jeans desde 1980",
     description:
-      "40+ años cortando, cosiendo y bordando denim para empresas e instituciones en El Salvador, Guatemala y Costa Rica. Calidad industrial certificada.",
+      "46+ años cortando, cosiendo y bordando denim para empresas e instituciones en El Salvador, Guatemala y Costa Rica. Calidad industrial certificada.",
   },
   nav: {
     inicio: "Inicio",
@@ -19,11 +19,11 @@ const es: Dictionary = {
     quoteCta: "Solicitar cotización",
   },
   home: {
-    badge: "EST. 1982 · EL SALVADOR · 10,000+ PZ/MES",
+    badge: "EST. 1980 · EL SALVADOR",
     heroTitlePrefix: "Expertos en fabricación de",
     heroTitleHighlight: "jeans",
     heroBody:
-      "40+ años cortando, cosiendo y bordando denim para empresas e instituciones en El Salvador, Guatemala y Costa Rica. Calidad industrial certificada.",
+      "46+ años de dominio en el corte, costura y acabado de denim — hoy fabricamos uniformes corporativos con ese mismo nivel de oficio.",
     ctaPrimary: "Solicitar cotización",
     ctaSecondary: "Ver catálogo",
     specLabel: "Denim",
@@ -35,7 +35,7 @@ const es: Dictionary = {
     products: [
       {
         tag: "Denim Industrial",
-        title: "Uniformes Institucionales",
+        title: "Confección de Jeans",
         description: "Costuras triple refuerzo, remaches de cobre y tela pre-lavada.",
       },
       {
@@ -65,22 +65,22 @@ const es: Dictionary = {
     eyebrow: "Herencia Industrial",
     title: "Nuestra historia y valores",
     badgeTop: "Registro de Excelencia",
-    badgeYears: "40+ años de trayectoria",
-    badgeEst: "EST. 1982",
-    introSpec: "Spec: Desde 1982",
+    badgeYears: "46+ años de trayectoria",
+    badgeEst: "EST. 1980",
+    introSpec: "Spec: Desde 1980",
     introCaption: "Raíces en la confección",
     introBody:
-      "Fundada sobre los pilares del esfuerzo y la precisión técnica, Industrias Texano ha evolucionado de un taller familiar a un referente regional en la confección de jeans y uniformes de alta resistencia.",
+      "Todo comenzó en 1970 como un negocio familiar de pantalones. En 1980 nace formalmente Industrias Texano, y desde entonces nos hemos consolidado como fabricantes expertos en jeans y uniformes de denim, reconocidos por clientes y proveedores en toda la región.",
     milestonesTitle: "Hitos Técnicos",
     milestones: [
-      { year: "01 / 1982", title: "Fundación", body: "Iniciamos operaciones en 1982 como un taller familiar dedicado a la confección de jeans." },
-      { year: "02 / 2005", title: "Expansión Regional", body: "Consolidación de nuestra presencia en mercados internacionales, exportando calidad industrial." },
-      { year: "03 / 2024", title: "Nueva Era", body: "Integración de tecnologías sostenibles sin sacrificar la robustez del tejido original." },
+      { year: "01 / 1970", title: "Origen familiar", body: "Nace como un pequeño negocio familiar de pantalones, con enfoque en calidad y trato cercano al cliente." },
+      { year: "02 / 1980", title: "Fundación de Industrias Texano", body: "Se formaliza como Industrias Texano, iniciando la especialización en jeans y prendas de denim." },
+      { year: "03 / Últimos 15 años", title: "Expertos en jeans", body: "Consolidación como fabricantes expertos en pantalón jeans, con reconocimiento de clientes y proveedores en toda la región." },
     ],
     valuesTitle: "Nuestros Valores",
     values: [
       { title: "Legado Familiar", body: "Creemos en el crecimiento conjunto de nuestra comunidad y colaboradores." },
-      { title: "Rigor Técnico", body: "Cada centímetro de tela es sometido a pruebas de resistencia industrial extremas." },
+      { title: "Rigor Técnico", body: "Cada prenda pasa por controles de calidad exhaustivos en cada etapa de confección." },
     ],
     ctaEyebrow: "¿Quieres saber más?",
     ctaButton: "Ver especificaciones técnicas",
@@ -170,7 +170,7 @@ const es: Dictionary = {
     millCaption: "Vista de planta 01A",
   },
   footer: {
-    tagline: "Fabricantes de jeans y uniformes desde 1982",
+    tagline: "Fabricantes de jeans y uniformes desde 1980",
     address: "San Salvador, El Salvador",
     privacy: "Privacidad",
     terms: "Términos",

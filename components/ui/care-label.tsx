@@ -4,7 +4,7 @@ type CareLabelProps = {
   className?: string;
 };
 
-/** The rotated "garment tag" badge motif used throughout the Stitch design (EST. 1982, SPEC:, MOD:, etc). */
+/** The rotated "garment tag" badge motif used throughout the Stitch design (EST. 1980, SPEC:, MOD:, etc). */
 export default function CareLabel({ children, tilt = "left", className = "" }: CareLabelProps) {
   const tiltClass =
     tilt === "left" ? "care-label-tilt-left" : tilt === "right" ? "care-label-tilt-right" : "";

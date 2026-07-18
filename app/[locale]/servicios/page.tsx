@@ -13,7 +13,7 @@ export async function generateMetadata({
   return { title: getDictionary(locale).services.title };
 }
 
-const serviceImages = ["/images/servicio-lavanderia.jpg", "/images/servicio-bordado.jpg"];
+const serviceImages = ["/images/servicio-lavanderia.jpg", "/images/bordado-corporativo.jpg"];
 
 export default async function ServiciosPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale: rawLocale } = await params;
