@@ -166,7 +166,7 @@ const es: Dictionary = {
     channelsTitle: "Canales de atención",
     whatsapp: { label: "WhatsApp Business", caption: "Mensajería instantánea" },
     phone: { label: "Línea principal de planta", caption: "Teléfono" },
-    email: { label: "ventas@industriastexano.com", caption: "Ventas / Cotizaciones" },
+    email: { label: "info@industriastexano.com", caption: "Ventas / Cotizaciones" },
     millCaption: "Vista de planta 01A",
   },
   footer: {

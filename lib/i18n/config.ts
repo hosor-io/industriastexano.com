@@ -10,7 +10,7 @@ export const siteConfig = {
   name: "Industrias Texano",
   domain: "https://industriastexano.com",
   whatsappNumber: "50372958591",
-  email: "ventas@industriastexano.com",
+  email: "info@industriastexano.com",
   phoneDisplay: "+503 7295-8591",
   city: "Armenia, Sonsonate, El Salvador",
 };
