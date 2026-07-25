@@ -21,6 +21,16 @@ const productImages = [
   "/images/catalogo-camisa.jpg",
 ];
 
+// Jeans/Jackets/Uniformes/Shorts share the general catalog; Camisas links to
+// the Sergio brand catalog, where that product's photo actually comes from.
+const catalogPdfs = [
+  "/catalogo/catalogo-productos.pdf",
+  "/catalogo/catalogo-productos.pdf",
+  "/catalogo/catalogo-productos.pdf",
+  "/catalogo/catalogo-productos.pdf",
+  "/catalogo/catalogo-sergio.pdf",
+];
+
 export default async function ProductosPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale: rawLocale } = await params;
   const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
@@ -39,7 +49,7 @@ export default async function ProductosPage({ params }: { params: Promise<{ loca
 
       <section className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
         {t.items.map((item, i) => {
-          const hasCatalog = i < 4; // Jeans, Jackets, Uniformes, Shorts — Camisas has no catalog page yet
+          const catalogHref = catalogPdfs[i];
 
           const cardBody = (
             <>
@@ -61,33 +71,23 @@ export default async function ProductosPage({ params }: { params: Promise<{ loca
               <div className="mt-4 border-l-4 border-gold pl-4">
                 <p className="text-body-md text-on-surface-variant">{item.description}</p>
               </div>
-              {hasCatalog && (
-                <p className="mt-3 font-label-tech text-technical-sm font-bold uppercase tracking-wide text-navy underline underline-offset-4 group-hover:text-gold">
-                  {t.viewCatalog} ↗
-                </p>
-              )}
+              <p className="mt-3 font-label-tech text-technical-sm font-bold uppercase tracking-wide text-navy underline underline-offset-4 group-hover:text-gold">
+                {t.viewCatalog} ↗
+              </p>
             </>
           );
 
-          if (hasCatalog) {
-            return (
-              <a
-                key={item.number}
-                href="/catalogo/catalogo-productos.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`${item.name} — ${t.viewCatalog}`}
-                className="group relative block outline-offset-4 focus-visible:outline-2 focus-visible:outline-gold"
-              >
-                {cardBody}
-              </a>
-            );
-          }
-
           return (
-            <article key={item.number} className="relative">
+            <a
+              key={item.number}
+              href={catalogHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${item.name} — ${t.viewCatalog}`}
+              className="group relative block outline-offset-4 focus-visible:outline-2 focus-visible:outline-gold"
+            >
               {cardBody}
-            </article>
+            </a>
           );
         })}
       </section>
