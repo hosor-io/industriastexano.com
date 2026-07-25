@@ -67,7 +67,9 @@ export default async function MarcasPage({ params }: { params: Promise<{ locale:
                 </div>
               </div>
               <a
-                href={`/${locale}/contacto`}
+                href="/catalogo/catalogo-productos.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className={`flex items-center justify-between px-6 py-4 font-label-tech uppercase transition-transform active:scale-[0.98] ${
                   i === 0 ? "bg-ink text-white" : "hard-shadow border border-white bg-navy text-white"
                 }`}
