@@ -18,7 +18,7 @@ const productImages = [
   "/images/catalogo-jacket.jpg",
   "/images/catalogo-uniforme.jpg",
   "/images/catalogo-shorts.jpg",
-  "/images/producto-camisas.jpg",
+  "/images/catalogo-camisa.jpg",
 ];
 
 export default async function ProductosPage({ params }: { params: Promise<{ locale: string }> }) {
