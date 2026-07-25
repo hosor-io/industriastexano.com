@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import { Montserrat, Archivo_Narrow } from "next/font/google";
 import "../globals.css";
 import SiteHeader from "@/components/site-header";
@@ -91,11 +90,9 @@ export default async function LocaleLayout({
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
         />
-        <Script
-          src="https://analytics.ahrefs.com/analytics.js"
-          data-key="9sS2OsC9L2S1SWEcxGhwWg"
-          strategy="afterInteractive"
-        />
+        {/* Plain <script> tag (not next/script) so it's a literal, static
+            <head> tag Ahrefs' installation checker can find by parsing HTML. */}
+        <script src="https://analytics.ahrefs.com/analytics.js" data-key="9sS2OsC9L2S1SWEcxGhwWg" async />
       </head>
       <body className="font-sans">
         <SiteHeader locale={locale} dict={dict} />
