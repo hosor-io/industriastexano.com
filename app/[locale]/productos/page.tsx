@@ -14,10 +14,10 @@ export async function generateMetadata({
 }
 
 const productImages = [
-  "/images/jeans-industriales.jpg",
-  "/images/marca-eurosilver.jpg",
-  "/images/producto-uniformes.jpg",
-  "/images/producto-shorts.jpg",
+  "/images/catalogo-jeans.jpg",
+  "/images/catalogo-jacket.jpg",
+  "/images/catalogo-uniforme.jpg",
+  "/images/catalogo-shorts.jpg",
   "/images/producto-camisas.jpg",
 ];
 
