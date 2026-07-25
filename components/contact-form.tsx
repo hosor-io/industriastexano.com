@@ -13,6 +13,9 @@ export default function ContactForm({
   defaultEmail?: string;
 }) {
   const [status, setStatus] = useState<Status>("idle");
+  // Timestamp the form mounted — the server rejects submissions that come
+  // back suspiciously fast, which a human filling a multi-field form never does.
+  const [renderedAt] = useState(() => Date.now());
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -30,6 +33,8 @@ export default function ContactForm({
       product: String(data.get("product") || ""),
       quantity: String(data.get("quantity") || ""),
       message: String(data.get("message") || ""),
+      website: String(data.get("website") || ""),
+      renderedAt,
     };
 
     try {
@@ -52,6 +57,13 @@ export default function ContactForm({
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+      {/* Honeypot — hidden from sighted users and screen readers; bots that
+          blindly fill every field trip this and get silently dropped server-side. */}
+      <div className="absolute left-[-9999px] top-auto h-0 w-0 overflow-hidden" aria-hidden="true">
+        <label htmlFor="website">Website</label>
+        <input id="website" name="website" type="text" tabIndex={-1} autoComplete="off" />
+      </div>
+
       <div className="flex flex-col gap-1">
         <label htmlFor="company" className={labelClass}>
           {form.company}
