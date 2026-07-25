@@ -38,28 +38,58 @@ export default async function ProductosPage({ params }: { params: Promise<{ loca
       </div>
 
       <section className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
-        {t.items.map((item, i) => (
-          <article key={item.number} className="relative">
-            <div className="mb-4 flex items-start gap-4">
-              <span className="text-headline-lg-mobile leading-none text-ink opacity-20">{item.number}</span>
-              <div>
-                <h3 className="text-headline-lg-mobile uppercase leading-none text-ink">{item.name}</h3>
-                <p className="mt-1 font-label-tech text-technical-sm text-gold">{item.spec}</p>
-              </div>
-            </div>
-            <div className="relative aspect-square w-full overflow-hidden border-2 border-ink bg-surface-container">
-              <PlaceholderPhoto label={item.name} alt={`${item.name} — ${item.spec}`} src={productImages[i]} />
-              {item.badge && (
-                <div className="hard-shadow rotate-2 absolute bottom-4 right-4 border border-ink bg-surface-container-lowest p-2">
-                  <p className="font-label-tech text-technical-xs text-ink">{item.badge}</p>
+        {t.items.map((item, i) => {
+          const hasCatalog = i < 4; // Jeans, Jackets, Uniformes, Shorts — Camisas has no catalog page yet
+
+          const cardBody = (
+            <>
+              <div className="mb-4 flex items-start gap-4">
+                <span className="text-headline-lg-mobile leading-none text-ink opacity-20">{item.number}</span>
+                <div>
+                  <h3 className="text-headline-lg-mobile uppercase leading-none text-ink">{item.name}</h3>
+                  <p className="mt-1 font-label-tech text-technical-sm text-gold">{item.spec}</p>
                 </div>
+              </div>
+              <div className="relative aspect-square w-full overflow-hidden border-2 border-ink bg-surface-container">
+                <PlaceholderPhoto label={item.name} alt={`${item.name} — ${item.spec}`} src={productImages[i]} />
+                {item.badge && (
+                  <div className="hard-shadow rotate-2 absolute bottom-4 right-4 border border-ink bg-surface-container-lowest p-2">
+                    <p className="font-label-tech text-technical-xs text-ink">{item.badge}</p>
+                  </div>
+                )}
+              </div>
+              <div className="mt-4 border-l-4 border-gold pl-4">
+                <p className="text-body-md text-on-surface-variant">{item.description}</p>
+              </div>
+              {hasCatalog && (
+                <p className="mt-3 font-label-tech text-technical-sm font-bold uppercase tracking-wide text-navy underline underline-offset-4 group-hover:text-gold">
+                  {t.viewCatalog} ↗
+                </p>
               )}
-            </div>
-            <div className="mt-4 border-l-4 border-gold pl-4">
-              <p className="text-body-md text-on-surface-variant">{item.description}</p>
-            </div>
-          </article>
-        ))}
+            </>
+          );
+
+          if (hasCatalog) {
+            return (
+              <a
+                key={item.number}
+                href="/catalogo/catalogo-productos.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${item.name} — ${t.viewCatalog}`}
+                className="group relative block outline-offset-4 focus-visible:outline-2 focus-visible:outline-gold"
+              >
+                {cardBody}
+              </a>
+            );
+          }
+
+          return (
+            <article key={item.number} className="relative">
+              {cardBody}
+            </article>
+          );
+        })}
       </section>
 
       <section className="mt-20 border-4 border-ink bg-navy p-6 text-white shadow-[8px_8px_0_0_var(--color-gold)] md:p-10">

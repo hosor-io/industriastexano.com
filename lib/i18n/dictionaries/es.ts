@@ -95,6 +95,7 @@ const es: Dictionary = {
       { number: "04", name: "Shorts", spec: "Utility Cut", badge: null, description: "Corte técnico con bolsillos de carga reforzados. Ideal para climas cálidos industriales." },
       { number: "05", name: "Camisas", spec: "Essential Weave", badge: "Acabado Suave", description: "Mezclilla de gramaje liviano con acabados de alta costura industrial." },
     ],
+    viewCatalog: "Ver catálogo (PDF)",
     ctaTitle: "¿Buscas algo específico?",
     ctaBody: "Personalización de telas y cortes disponibles para pedidos volumétricos.",
     ctaButton: "Contactar ventas",

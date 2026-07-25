@@ -58,6 +58,7 @@ export type Dictionary = {
     tag: string;
     title: string;
     items: { number: string; name: string; spec: string; badge: string | null; description: string }[];
+    viewCatalog: string;
     ctaTitle: string;
     ctaBody: string;
     ctaButton: string;

@@ -95,6 +95,7 @@ const en: Dictionary = {
       { number: "04", name: "Shorts", spec: "Utility Cut", badge: null, description: "Technical cut with reinforced cargo pockets. Ideal for hot industrial climates." },
       { number: "05", name: "Shirts", spec: "Essential Weave", badge: "Soft Finish", description: "Lightweight denim with high-craft industrial finishes." },
     ],
+    viewCatalog: "View catalog (PDF)",
     ctaTitle: "Looking for something specific?",
     ctaBody: "Custom fabrics and cuts available for volume orders.",
     ctaButton: "Contact sales",
