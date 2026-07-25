@@ -85,6 +85,15 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className={`${montserrat.variable} ${archivoNarrow.variable}`}>
       <head>
+        {/* Google Tag Manager — kept as high as possible in <head> per Google's own instructions.
+            Plain inline <script> (not @next/third-parties) so it renders as a literal static tag,
+            same reasoning as the Ahrefs script below. */}
+        {/* eslint-disable-next-line @next/next/next-script-for-ga */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-M7BT8C9D');`,
+          }}
+        />
         {/* eslint-disable-next-line @next/next/no-page-custom-font -- App Router root layout, not pages/_document */}
         <link
           rel="stylesheet"
@@ -95,6 +104,16 @@ export default async function LocaleLayout({
         <script src="https://analytics.ahrefs.com/analytics.js" data-key="9sS2OsC9L2S1SWEcxGhwWg" async />
       </head>
       <body className="font-sans">
+        {/* Google Tag Manager (noscript) — must be immediately after <body>. */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-M7BT8C9D"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+            title="Google Tag Manager"
+          />
+        </noscript>
         <SiteHeader locale={locale} dict={dict} />
         <main className="pt-16 pb-16 lg:pb-0">{children}</main>
         <SiteFooter locale={locale} dict={dict} />
