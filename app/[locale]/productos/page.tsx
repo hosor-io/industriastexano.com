@@ -15,9 +15,9 @@ export async function generateMetadata({
 
 const productImages = [
   "/images/jeans-industriales.jpg",
-  "/images/bordado-corporativo.jpg",
+  "/images/marca-eurosilver.jpg",
   "/images/producto-uniformes.jpg",
-  "/images/denim-texture.jpg",
+  "/images/producto-shorts.jpg",
   "/images/producto-camisas.jpg",
 ];
 
