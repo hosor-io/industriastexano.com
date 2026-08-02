@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import PlaceholderPhoto from "@/components/placeholder-photo";
-import { defaultLocale, isLocale, type Locale } from "@/lib/i18n/config";
+import { defaultLocale, isLocale, localeAlternates, type Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 
 export async function generateMetadata({
@@ -10,7 +10,10 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale: rawLocale } = await params;
   const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
-  return { title: getDictionary(locale).products.title };
+  return {
+    title: getDictionary(locale).products.title,
+    alternates: localeAlternates(locale, "productos"),
+  };
 }
 
 const productImages = [

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import PlaceholderPhoto from "@/components/placeholder-photo";
 import ContactForm from "@/components/contact-form";
-import { defaultLocale, isLocale, siteConfig, type Locale } from "@/lib/i18n/config";
+import { defaultLocale, isLocale, localeAlternates, siteConfig, type Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 
 export async function generateMetadata({
@@ -11,7 +11,10 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale: rawLocale } = await params;
   const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
-  return { title: getDictionary(locale).contact.title };
+  return {
+    title: getDictionary(locale).contact.title,
+    alternates: localeAlternates(locale, "contacto"),
+  };
 }
 
 export default async function ContactoPage({

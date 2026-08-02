@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import CareLabel from "@/components/ui/care-label";
 import PlaceholderPhoto from "@/components/placeholder-photo";
-import { defaultLocale, isLocale, type Locale } from "@/lib/i18n/config";
+import { defaultLocale, isLocale, localeAlternates, type Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 
 export async function generateMetadata({
@@ -11,7 +11,10 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale: rawLocale } = await params;
   const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
-  return { title: getDictionary(locale).about.title };
+  return {
+    title: getDictionary(locale).about.title,
+    alternates: localeAlternates(locale, "nosotros"),
+  };
 }
 
 export default async function NosotrosPage({ params }: { params: Promise<{ locale: string }> }) {
