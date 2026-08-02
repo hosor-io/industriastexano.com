@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import PlaceholderPhoto from "@/components/placeholder-photo";
 import ContactForm from "@/components/contact-form";
-import { defaultLocale, isLocale, localeAlternates, siteConfig, type Locale } from "@/lib/i18n/config";
+import ContactFormWithEmailParam from "@/components/contact-form-with-email-param";
+import { defaultLocale, isLocale, localeAlternates, locales, siteConfig, type Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/dictionaries";
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
 
 export async function generateMetadata({
   params,
@@ -17,15 +23,8 @@ export async function generateMetadata({
   };
 }
 
-export default async function ContactoPage({
-  params,
-  searchParams,
-}: {
-  params: Promise<{ locale: string }>;
-  searchParams: Promise<{ email?: string }>;
-}) {
+export default async function ContactoPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale: rawLocale } = await params;
-  const { email } = await searchParams;
   const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
   const dict = getDictionary(locale);
   const t = dict.contact;
@@ -52,7 +51,9 @@ export default async function ContactoPage({
           {t.formBadge}
         </div>
         <div className="md:col-span-3">
-          <ContactForm form={t.form} defaultEmail={email} />
+          <Suspense fallback={<ContactForm form={t.form} />}>
+            <ContactFormWithEmailParam form={t.form} />
+          </Suspense>
         </div>
 
         <div className="flex flex-col gap-gutter md:col-span-2">
