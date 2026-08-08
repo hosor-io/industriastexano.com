@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import PlaceholderPhoto from "@/components/placeholder-photo";
 import ContactForm from "@/components/contact-form";
 import ContactFormWithEmailParam from "@/components/contact-form-with-email-param";
 import { defaultLocale, isLocale, localeAlternates, locales, siteConfig, type Locale } from "@/lib/i18n/config";
@@ -110,13 +109,6 @@ export default async function ContactoPage({ params }: { params: Promise<{ local
                 </div>
               </div>
             </a>
-          </div>
-
-          <div className="relative h-48 w-full overflow-hidden border-2 border-ink">
-            <PlaceholderPhoto label="Planta industrial" alt="Vista de planta industrial" src="/images/mill-facility.jpg" />
-            <div className="absolute bottom-2 left-2 border border-ink bg-surface px-2 py-0.5 font-label-tech text-[10px] uppercase">
-              {t.millCaption}
-            </div>
           </div>
         </div>
       </section>

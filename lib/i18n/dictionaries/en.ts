@@ -174,7 +174,6 @@ const en: Dictionary = {
     whatsapp: { label: "WhatsApp Business", caption: "Instant messaging" },
     phone: { label: "Factory main line", caption: "Phone" },
     email: { label: "info@industriastexano.com", caption: "Sales / Quotes" },
-    millCaption: "Facility view 01A",
   },
   footer: {
     tagline: "Corporate uniform and jeans manufacturers since 1980",

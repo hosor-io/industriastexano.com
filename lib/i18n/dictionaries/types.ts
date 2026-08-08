@@ -119,7 +119,6 @@ export type Dictionary = {
     whatsapp: { label: string; caption: string };
     phone: { label: string; caption: string };
     email: { label: string; caption: string };
-    millCaption: string;
   };
   footer: {
     tagline: string;
