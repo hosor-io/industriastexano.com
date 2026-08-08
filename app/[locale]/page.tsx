@@ -3,7 +3,7 @@ import Image from "next/image";
 import CareLabel from "@/components/ui/care-label";
 import PlaceholderPhoto from "@/components/placeholder-photo";
 import StitchDivider from "@/components/ui/stitch-divider";
-import { defaultLocale, isLocale, siteConfig, type Locale } from "@/lib/i18n/config";
+import { defaultLocale, isLocale, type Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { clients } from "@/lib/clients";
 
@@ -16,12 +16,14 @@ export async function generateMetadata({
   const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
   const dict = getDictionary(locale);
   // This segment sits at the same level as the layout defining the title
-  // template, so it doesn't inherit it — build the "| Industrias Texano"
-  // suffix explicitly to match every other page's tab title.
-  return { title: `${dict.home.heroTitlePrefix} ${dict.home.heroTitleHighlight} | ${siteConfig.name}` };
+  // template, so it doesn't inherit it. meta.titleSuffix is already the
+  // exact SEO title we want here, so reuse it directly instead of
+  // reconstructing one from the hero copy (which can now read differently).
+  return { title: dict.meta.titleSuffix };
 }
 
 const productImages = ["/images/jeans-industriales.jpg", "/images/bordado-corporativo.jpg", "/images/servicio-lavanderia.jpg"];
+const productAnchors = ["confeccion", "bordado", "lavanderia"];
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale: rawLocale } = await params;
@@ -48,7 +50,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               </p>
             </CareLabel>
             <h1 className="mb-6 font-sans text-headline-xl uppercase leading-[0.95] text-surface-container-lowest md:text-[72px] md:leading-[0.95]">
-              {t.heroTitlePrefix} <span className="text-gold">{t.heroTitleHighlight}</span>
+              <span className="text-gold">{t.heroTitleHighlight}</span>
+              {t.heroTitleSuffix}
             </h1>
             <p className="mb-10 max-w-lg border-l-4 border-gold pl-6 text-body-lg text-surface-container-low opacity-90">
               {t.heroBody}
@@ -61,7 +64,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                 {t.ctaPrimary}
               </a>
               <a
-                href={`/${locale}/productos`}
+                href={`/${locale}/uniformes#confeccion`}
                 className="border-2 border-white px-10 py-5 text-center font-label-tech font-bold uppercase text-white transition-all hover:bg-white hover:text-navy"
               >
                 {t.ctaSecondary}
@@ -102,7 +105,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             {t.products.map((product, i) => (
-              <div key={product.title}>
+              <a key={product.title} href={`/${locale}/uniformes#${productAnchors[i]}`} className="group block">
                 <div className="relative mb-6 h-[380px] overflow-hidden border-2 border-navy md:h-[450px]">
                   <PlaceholderPhoto label={product.title} alt={product.title} src={productImages[i]} grayscaleHover />
                   <div className="absolute top-4 left-4 bg-navy px-2 py-1 font-label-tech text-[10px] font-bold uppercase text-white">
@@ -110,10 +113,10 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                   </div>
                 </div>
                 <div className="border-b-2 border-navy pb-4">
-                  <h3 className="mb-2 text-headline-md uppercase text-on-surface">{product.title}</h3>
+                  <h3 className="mb-2 text-headline-md uppercase text-on-surface group-hover:text-gold">{product.title}</h3>
                   <p className="text-body-md text-on-surface-variant">{product.description}</p>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>

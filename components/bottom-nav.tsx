@@ -10,9 +10,8 @@ export default function BottomNav({ locale, dict }: { locale: Locale; dict: Dict
 
   const items = [
     { href: `/${locale}`, label: dict.nav.inicio, icon: "home" },
-    { href: `/${locale}/productos`, label: dict.nav.productos, icon: "architecture" },
-    { href: `/${locale}/servicios`, label: dict.nav.servicios, icon: "precision_manufacturing" },
-    { href: `/${locale}/marcas`, label: dict.nav.marcas, icon: "style" },
+    { href: `/${locale}/uniformes`, label: dict.nav.uniformes, icon: "checkroom" },
+    { href: `/${locale}/nosotros`, label: dict.nav.nosotros, icon: "history_edu" },
     { href: `/${locale}/contacto`, label: dict.nav.contacto, icon: "mail" },
   ];
 

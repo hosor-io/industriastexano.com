@@ -4,7 +4,7 @@ import { join } from "node:path";
 import { defaultLocale, isLocale, type Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 
-export const alt = "Industrias Texano — Fabricación de jeans y uniformes industriales";
+export const alt = "Industrias Texano — Uniformes empresariales fabricados por expertos en jeans";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 

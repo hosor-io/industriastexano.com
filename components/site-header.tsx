@@ -14,10 +14,8 @@ export default function SiteHeader({ locale, dict }: { locale: Locale; dict: Dic
 
   const navItems = [
     { href: `/${locale}`, label: dict.nav.inicio, icon: "home" },
+    { href: `/${locale}/uniformes`, label: dict.nav.uniformes, icon: "checkroom" },
     { href: `/${locale}/nosotros`, label: dict.nav.nosotros, icon: "history_edu" },
-    { href: `/${locale}/productos`, label: dict.nav.productos, icon: "architecture" },
-    { href: `/${locale}/servicios`, label: dict.nav.servicios, icon: "precision_manufacturing" },
-    { href: `/${locale}/marcas`, label: dict.nav.marcas, icon: "style" },
     { href: `/${locale}/contacto`, label: dict.nav.contacto, icon: "mail" },
   ];
 

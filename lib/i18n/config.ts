@@ -17,7 +17,7 @@ export const siteConfig = {
 
 // Path segments are shared across locales (e.g. /en/nosotros, not /en/about)
 // so the language switcher only ever needs to swap the leading locale segment.
-export const navPaths = ["", "nosotros", "productos", "servicios", "marcas", "contacto"] as const;
+export const navPaths = ["", "uniformes", "nosotros", "marcas", "contacto"] as const;
 
 // Per-page canonical + hreflang alternates. Every page must set its own
 // (via generateMetadata) instead of inheriting the root layout's, which only

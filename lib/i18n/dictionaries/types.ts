@@ -2,9 +2,8 @@ export type Dictionary = {
   meta: { titleSuffix: string; description: string };
   nav: {
     inicio: string;
+    uniformes: string;
     nosotros: string;
-    productos: string;
-    servicios: string;
     marcas: string;
     contacto: string;
     menuOpen: string;
@@ -14,8 +13,8 @@ export type Dictionary = {
   };
   home: {
     badge: string;
-    heroTitlePrefix: string;
     heroTitleHighlight: string;
+    heroTitleSuffix: string;
     heroBody: string;
     ctaPrimary: string;
     ctaSecondary: string;
@@ -55,8 +54,6 @@ export type Dictionary = {
     ctaButton: string;
   };
   products: {
-    tag: string;
-    title: string;
     items: { number: string; name: string; spec: string; badge: string | null; description: string }[];
     viewCatalog: string;
     ctaTitle: string;
@@ -64,8 +61,6 @@ export type Dictionary = {
     ctaButton: string;
   };
   services: {
-    eyebrow: string;
-    title: string;
     items: {
       number: string;
       badge: string;
@@ -75,6 +70,17 @@ export type Dictionary = {
       chips?: string[];
     }[];
     quote: string;
+  };
+  uniforms: {
+    tag: string;
+    title: string;
+    lead: string;
+    navConfeccion: string;
+    navBordado: string;
+    navLavanderia: string;
+    confeccionTitle: string;
+    confeccionLead: string;
+    catalogCta: string;
   };
   brands: {
     eyebrow: string;

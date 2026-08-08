@@ -2,15 +2,14 @@ import type { Dictionary } from "./types";
 
 const es: Dictionary = {
   meta: {
-    titleSuffix: "Industrias Texano — Expertos en Fabricación de Jeans desde 1980",
+    titleSuffix: "Uniformes Empresariales fabricados por expertos en jeans | Industrias Texano",
     description:
-      "46+ años cortando, cosiendo y bordando denim para empresas e instituciones en El Salvador, Guatemala y Costa Rica. Calidad industrial certificada.",
+      "Fabricamos uniformes empresariales con la calidad de quienes llevan 46+ años dominando la confección de jeans. El Salvador, Guatemala y Costa Rica.",
   },
   nav: {
     inicio: "Inicio",
+    uniformes: "Uniformes Empresariales",
     nosotros: "Nosotros",
-    productos: "Productos",
-    servicios: "Servicios",
     marcas: "Marcas Propias",
     contacto: "Contacto",
     menuOpen: "Abrir menú",
@@ -20,8 +19,8 @@ const es: Dictionary = {
   },
   home: {
     badge: "EST. 1980 · EL SALVADOR",
-    heroTitlePrefix: "Expertos en fabricación de",
-    heroTitleHighlight: "jeans",
+    heroTitleHighlight: "Uniformes empresariales",
+    heroTitleSuffix: ", fabricados por expertos en jeans.",
     heroBody:
       "46+ años de dominio en el corte, costura y acabado de denim — hoy fabricamos uniformes corporativos con ese mismo nivel de oficio.",
     ctaPrimary: "Solicitar cotización",
@@ -29,14 +28,14 @@ const es: Dictionary = {
     specLabel: "Denim",
     specValue: "A la medida",
     specCaption: "Distintos pesos y acabados según cada uniforme",
-    sectionEyebrow: "01 // PRODUCTOS & SERVICIOS",
-    sectionTitle: "Ingeniería en Confección",
-    sectionLead: "Capacidad instalada para producción masiva con acabados técnicos.",
+    sectionEyebrow: "01 // UNIFORMES EMPRESARIALES",
+    sectionTitle: "Uniformes Empresariales",
+    sectionLead: "Confección, personalización y acabado industrial para el uniforme corporativo de su equipo.",
     products: [
       {
         tag: "Denim Industrial",
-        title: "Confección de Jeans",
-        description: "Costuras triple refuerzo, remaches de cobre y tela pre-lavada.",
+        title: "Confección de Uniformes",
+        description: "Uniformes corporativos con la misma ingeniería de costura y refuerzo que aplicamos en jeans de exportación.",
       },
       {
         tag: "Bordado Industrial",
@@ -86,8 +85,6 @@ const es: Dictionary = {
     ctaButton: "Ver especificaciones técnicas",
   },
   products: {
-    tag: "Catálogo 2024",
-    title: "Productos",
     items: [
       { number: "01", name: "Jeans", spec: "Industrial Selvedge", badge: "Corte Industrial", description: "Mezclilla de alto gramaje para uso industrial diario. Resistencia superior a la abrasión." },
       { number: "02", name: "Jackets", spec: "Workwear Armor", badge: "Stitch: Reinforced", description: "Diseño ergonómico con costuras triples. Mezclilla pre-lavada para mayor flexibilidad." },
@@ -101,8 +98,6 @@ const es: Dictionary = {
     ctaButton: "Contactar ventas",
   },
   services: {
-    eyebrow: "División Servicios",
-    title: "Infraestructura de alto rendimiento",
     items: [
       {
         number: "01",
@@ -123,6 +118,17 @@ const es: Dictionary = {
       },
     ],
     quote: "Cada puntada y cada lavado está sujeto a nuestros protocolos internos de control de calidad en cada etapa de producción.",
+  },
+  uniforms: {
+    tag: "Oferta Principal",
+    title: "Uniformes Empresariales",
+    lead: "Confección, personalización y acabado industrial para el uniforme corporativo de su equipo — con el respaldo técnico de más de 46 años fabricando jeans.",
+    navConfeccion: "Confección",
+    navBordado: "Bordado Corporativo",
+    navLavanderia: "Lavandería Industrial",
+    confeccionTitle: "Confección de Uniformes en Denim",
+    confeccionLead: "Fabricamos su uniforme corporativo con la misma ingeniería de costura, refuerzos y acabados que aplicamos en jeans de exportación.",
+    catalogCta: "Ver Catálogo Completo",
   },
   brands: {
     eyebrow: "Sección 02",
@@ -171,7 +177,7 @@ const es: Dictionary = {
     millCaption: "Vista de planta 01A",
   },
   footer: {
-    tagline: "Fabricantes de jeans y uniformes desde 1980",
+    tagline: "Fabricantes de uniformes empresariales y jeans desde 1980",
     address: "San Salvador, El Salvador",
     privacy: "Privacidad",
     terms: "Términos",

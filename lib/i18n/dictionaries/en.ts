@@ -2,15 +2,14 @@ import type { Dictionary } from "./types";
 
 const en: Dictionary = {
   meta: {
-    titleSuffix: "Industrias Texano — Jeans Manufacturing Experts Since 1980",
+    titleSuffix: "Corporate Uniforms Made by Jeans Manufacturing Experts | Industrias Texano",
     description:
-      "46+ years cutting, sewing and embroidering denim for companies and institutions across El Salvador, Guatemala and Costa Rica. Certified industrial quality.",
+      "We manufacture corporate uniforms with the quality of a team that has spent 46+ years mastering jeans manufacturing. El Salvador, Guatemala and Costa Rica.",
   },
   nav: {
     inicio: "Home",
+    uniformes: "Corporate Uniforms",
     nosotros: "About",
-    productos: "Products",
-    servicios: "Services",
     marcas: "Our Brands",
     contacto: "Contact",
     menuOpen: "Open menu",
@@ -20,8 +19,8 @@ const en: Dictionary = {
   },
   home: {
     badge: "EST. 1980 · EL SALVADOR",
-    heroTitlePrefix: "Experts in",
-    heroTitleHighlight: "jeans manufacturing",
+    heroTitleHighlight: "Corporate uniforms",
+    heroTitleSuffix: ", made by expert jeans manufacturers.",
     heroBody:
       "46+ years mastering the cutting, sewing, and finishing of denim — today we bring that same craftsmanship to corporate uniforms.",
     ctaPrimary: "Request a quote",
@@ -29,14 +28,14 @@ const en: Dictionary = {
     specLabel: "Denim",
     specValue: "Made to fit",
     specCaption: "Different weights and finishes for every uniform",
-    sectionEyebrow: "01 // PRODUCTS & SERVICES",
-    sectionTitle: "Garment Engineering",
-    sectionLead: "Installed capacity for mass production with technical finishes.",
+    sectionEyebrow: "01 // CORPORATE UNIFORMS",
+    sectionTitle: "Corporate Uniforms",
+    sectionLead: "Manufacturing, personalization, and industrial finishing for your team's corporate uniform.",
     products: [
       {
         tag: "Industrial Denim",
-        title: "Jeans Manufacturing",
-        description: "Triple-reinforced seams, copper rivets, and pre-washed fabric.",
+        title: "Uniform Manufacturing",
+        description: "Corporate uniforms built with the same stitching engineering and reinforcement we apply to export-grade jeans.",
       },
       {
         tag: "Industrial Embroidery",
@@ -86,8 +85,6 @@ const en: Dictionary = {
     ctaButton: "View technical specifications",
   },
   products: {
-    tag: "2024 Catalog",
-    title: "Products",
     items: [
       { number: "01", name: "Jeans", spec: "Industrial Selvedge", badge: "Industrial Cut", description: "Heavy-weight denim for daily industrial use. Superior abrasion resistance." },
       { number: "02", name: "Jackets", spec: "Workwear Armor", badge: "Stitch: Reinforced", description: "Ergonomic design with triple stitching. Pre-washed denim for extra flexibility." },
@@ -101,8 +98,6 @@ const en: Dictionary = {
     ctaButton: "Contact sales",
   },
   services: {
-    eyebrow: "Services Division",
-    title: "High-performance infrastructure",
     items: [
       {
         number: "01",
@@ -123,6 +118,17 @@ const en: Dictionary = {
       },
     ],
     quote: "Every stitch and every wash follows our internal quality control protocols at each stage of production.",
+  },
+  uniforms: {
+    tag: "Core Offering",
+    title: "Corporate Uniforms",
+    lead: "Manufacturing, personalization, and industrial finishing for your team's corporate uniform — backed by 46+ years of jeans manufacturing expertise.",
+    navConfeccion: "Manufacturing",
+    navBordado: "Corporate Embroidery",
+    navLavanderia: "Industrial Laundry",
+    confeccionTitle: "Uniform Manufacturing in Denim",
+    confeccionLead: "We build your corporate uniform with the same stitching engineering, reinforcements, and finishes we apply to export-grade jeans.",
+    catalogCta: "View Full Catalog",
   },
   brands: {
     eyebrow: "Section 02",
@@ -171,7 +177,7 @@ const en: Dictionary = {
     millCaption: "Facility view 01A",
   },
   footer: {
-    tagline: "Jeans and uniform manufacturers since 1980",
+    tagline: "Corporate uniform and jeans manufacturers since 1980",
     address: "San Salvador, El Salvador",
     privacy: "Privacy",
     terms: "Terms",

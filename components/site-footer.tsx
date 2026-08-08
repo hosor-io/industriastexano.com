@@ -13,7 +13,10 @@ export default function SiteFooter({ locale, dict }: { locale: Locale; dict: Dic
           {dict.footer.tagline} — {dict.footer.address}
         </span>
       </div>
-      <nav aria-label="Legal" className="flex gap-6">
+      <nav aria-label="Secundario" className="flex flex-wrap justify-center gap-6">
+        <Link href={`/${locale}/marcas`} className="font-label-tech text-[10px] uppercase tracking-widest opacity-90 hover:text-gold hover:opacity-100">
+          {dict.nav.marcas}
+        </Link>
         <Link href={`/${locale}/contacto`} className="font-label-tech text-[10px] uppercase tracking-widest opacity-90 hover:text-gold hover:opacity-100">
           {dict.footer.privacy}
         </Link>
