@@ -7,6 +7,7 @@ import BottomNav from "@/components/bottom-nav";
 import WhatsappFab from "@/components/whatsapp-fab";
 import { locales, defaultLocale, isLocale, siteConfig, type Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/dictionaries";
+import { buildOrganizationJsonLd } from "@/lib/structured-data";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -81,10 +82,17 @@ export default async function LocaleLayout({
   const { locale: rawLocale } = await params;
   const locale: Locale = isLocale(rawLocale) ? rawLocale : defaultLocale;
   const dict = getDictionary(locale);
+  const jsonLd = buildOrganizationJsonLd(locale, dict);
 
   return (
     <html lang={locale} className={`${montserrat.variable} ${archivoNarrow.variable}`}>
       <head>
+        {/* Organization + WebSite structured data — gives Google an explicit
+            entity description instead of relying purely on inferring it from copy. */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
+        />
         {/* Google Tag Manager — kept as high as possible in <head> per Google's own instructions.
             Plain inline <script> (not @next/third-parties) so it renders as a literal static tag,
             same reasoning as the Ahrefs script below. */}
