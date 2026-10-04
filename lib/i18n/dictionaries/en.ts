@@ -90,7 +90,7 @@ const en: Dictionary = {
       { number: "02", name: "Jackets", spec: "Workwear Armor", badge: "Stitch: Reinforced", description: "Ergonomic design with triple stitching. Pre-washed denim for extra flexibility." },
       { number: "03", name: "Uniforms", spec: "Corporate Precision", badge: "Fabric: Poly-Denim", description: "Cotton-polyester blends for durability and a flawless office presentation." },
       { number: "04", name: "Shorts", spec: "Utility Cut", badge: null, description: "Technical cut with reinforced cargo pockets. Ideal for hot industrial climates." },
-      { number: "05", name: "Shirts", spec: "Essential Weave", badge: "Soft Finish", description: "Lightweight denim with high-craft industrial finishes." },
+      { number: "05", name: "Shirts", spec: "Essential Weave", badge: "Soft Finish", description: "Polo shirts and shirts for corporate uniforms, with comfortable finishes and a professional look." },
     ],
     viewCatalog: "View catalog (PDF)",
     ctaTitle: "Looking for something specific?",

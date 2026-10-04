@@ -90,7 +90,7 @@ const es: Dictionary = {
       { number: "02", name: "Jackets", spec: "Workwear Armor", badge: "Stitch: Reinforced", description: "Diseño ergonómico con costuras triples. Mezclilla pre-lavada para mayor flexibilidad." },
       { number: "03", name: "Uniformes", spec: "Corporate Precision", badge: "Fabric: Poly-Denim", description: "Mezclas de algodón y poliéster para durabilidad y presentación impecable en oficina." },
       { number: "04", name: "Shorts", spec: "Utility Cut", badge: null, description: "Corte técnico con bolsillos de carga reforzados. Ideal para climas cálidos industriales." },
-      { number: "05", name: "Camisas", spec: "Essential Weave", badge: "Acabado Suave", description: "Mezclilla de gramaje liviano con acabados de alta costura industrial." },
+      { number: "05", name: "Camisas", spec: "Essential Weave", badge: "Acabado Suave", description: "Polos y camisas para uniformes empresariales, con acabados cómodos y presentación profesional." },
     ],
     viewCatalog: "Ver catálogo (PDF)",
     ctaTitle: "¿Buscas algo específico?",
