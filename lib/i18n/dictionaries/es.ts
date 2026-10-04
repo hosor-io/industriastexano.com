@@ -126,8 +126,8 @@ const es: Dictionary = {
     navConfeccion: "Confección",
     navBordado: "Bordado Corporativo",
     navLavanderia: "Lavandería Industrial",
-    confeccionTitle: "Confección de Uniformes en Denim",
-    confeccionLead: "Fabricamos su uniforme corporativo con la misma ingeniería de costura, refuerzos y acabados que aplicamos en jeans de exportación.",
+    confeccionTitle: "Confección de Uniformes",
+    confeccionLead: "Fabricamos uniformes empresariales en El Salvador: jeans, polos, camisas con botones, camisetas y jackets. Adaptamos las prendas a las necesidades de cada área de tu empresa.",
     catalogCta: "Ver Catálogo Completo",
   },
   brands: {

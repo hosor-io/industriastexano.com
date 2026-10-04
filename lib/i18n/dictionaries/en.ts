@@ -126,8 +126,8 @@ const en: Dictionary = {
     navConfeccion: "Manufacturing",
     navBordado: "Corporate Embroidery",
     navLavanderia: "Industrial Laundry",
-    confeccionTitle: "Uniform Manufacturing in Denim",
-    confeccionLead: "We build your corporate uniform with the same stitching engineering, reinforcements, and finishes we apply to export-grade jeans.",
+    confeccionTitle: "Uniform Manufacturing",
+    confeccionLead: "We manufacture corporate uniforms in El Salvador: jeans, polo shirts, button-down shirts, t-shirts and jackets. We adapt each garment to the needs of every area of your company.",
     catalogCta: "View Full Catalog",
   },
   brands: {
